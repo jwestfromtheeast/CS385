@@ -1,0 +1,8 @@
+What is an algorithm?
+A sequence of unambiguous instructions for solving a rpbolem, i.e., for obtaining a required output for any
+legitamate input in a finite amount of time.
+Important points:
+1. The nonambiguity requirement for each step of an algorithm cannot be compromised.
+2. The range of inputs for which an algorithm works has to be specified carefully.
+3. The same algorithm can be represented in several different ways.
+4. There may exist several algorithms for solving the same problem.
