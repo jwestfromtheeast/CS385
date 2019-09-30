@@ -6,3 +6,19 @@ Important points:
 2. The range of inputs for which an algorithm works has to be specified carefully.
 3. The same algorithm can be represented in several different ways.
 4. There may exist several algorithms for solving the same problem.
+
+Convex hull
+A set of points (finite or infinite) in the plane is called convex if for any
+two points p and q in the set, the entire line segment with endpoints p and q
+belongs to the set.
+The convex hull of a set s of points is the smallest convex set containing s.
+(The smallest set of points that encloses all points in the entire set)
+
+Brute force: Pick two points and find the slope. Check if this line segment is in the convex hull
+(if you find an equation for this line, in x - y = n form, and there are points on both sides of 
+this segment, it is not in the convex hull. Else, it is.) The runtime of this is Theta(n^3),
+becuase it takes n(n-1)/2 to find all line segments, then n - 2 for each to find if it is in the
+convex hull.
+
+Optimal: Graham scan. Sort the set of points and find if each line segment makes a convex or concave angle.
+If it is convex, add it, if it is concave, don't. The sort is the dominant factor here, so Theta(nlgn)
