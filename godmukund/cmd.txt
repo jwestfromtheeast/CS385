@@ -1,0 +1,2 @@
+sed 's/.*time=\([+-]?([0-9]*[.])?[0-9]+*\) .*/\1/' RAWDATA | sort -n > outfile
+sed 's/[+-]?([0-9]*[.])?[0-9]+/\l/' RAWDATA | sort -n > outfile
