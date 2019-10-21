@@ -1,10 +1,10 @@
 /*******************************************************************************
  * Name        : inversioncounter.cpp
- * Author      :
+ * Author      : Justin Westley
  * Version     : 1.0
- * Date        :
+ * Date        : October 21, 2019
  * Description : Counts the number of inversions in an array.
- * Pledge      :
+ * Pledge      : I pledge my honor that I have abided by the Stevens Honor System.
  ******************************************************************************/
 #include <iostream>
 #include <algorithm>
@@ -24,6 +24,7 @@ static long mergesort(int array[], int scratch[], int low, int high);
  */
 long count_inversions_slow(int array[], int length) {
     // TODO
+    return 0;
 }
 
 /**
@@ -32,10 +33,12 @@ long count_inversions_slow(int array[], int length) {
 long count_inversions_fast(int array[], int length) {
     // TODO
     // Hint: Use mergesort!
+    return 0;
 }
 
 static long mergesort(int array[], int scratch[], int low, int high) {
     // TODO
+    return 0;
 }
 
 int main(int argc, char *argv[]) {
@@ -75,6 +78,12 @@ int main(int argc, char *argv[]) {
     }
 
     // TODO: produce output
+    int array[1];
+    array[0] = 1;
+    long count1 = count_inversions_slow(array, 1);
+    long count2 = count_inversions_fast(array, 1);
+    long count3 = mergesort(array, array, 0, 1);
+    cout << count1 + count2 + count3 << endl;
 
     return 0;
 }
