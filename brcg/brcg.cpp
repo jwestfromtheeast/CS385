@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <string>
 using namespace std;
 
 vector<string> brcg(unsigned int n) {
@@ -19,11 +20,19 @@ vector<string> brcg(unsigned int n) {
     v1.reserve(v1.size() << 1);
     vector<string> v2;
     v2.reserve(v1.size());
-    reverse_copy(v1.begin(), v1.end(), back_inserter(v2));
+    copy(v1.begin(), v1.end(), back_inserter(v2));
     for (size_t i = 0; i < v1.size(); ++i) {
         v1[i] = "0" + v1[i];
         v2[i] = "1" + v2[i];
     }
     v1.insert(v1.end(), v2.begin(), v2.end());
     return v1;
+}
+
+int main(int argc, char * const argv[]) {
+    int xd = stoi(argv[1]);
+    vector<string> ans = brcg(xd);
+    for (size_t i = 0; i < ans.size(); i++) {
+        cout << ans[i] << " ";
+    }
 }
